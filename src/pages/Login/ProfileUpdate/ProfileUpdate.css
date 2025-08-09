@@ -1,0 +1,243 @@
+.profile {
+    min-height: 100vh;
+    background: url(/background.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 40px;
+        
+    
+
+
+        h3 {
+            font-weight: 500;
+            font-size: 24px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px;
+            font-size:15px;
+            font-weight: 400;
+            background-color:#077eff ;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            
+        }
+    }
+
+ 
+
+    label {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        color: gray;
+        cursor: pointer;
+        
+        img {
+            width: 50px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+        }
+    }
+    input ,textarea {
+        padding: 10px ;
+        min-width: 300px;
+        border: 1px solid #c9c9c9;
+        outline-color:#077eff ;
+        border-radius: 10px;
+        
+    }
+
+}
+
+.profile-container {
+    background: linear-gradient( to right , #077eff  , #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 700px;
+    border-radius: 10px;
+}
+
+.profile-pic {
+    max-width: 160px;
+    aspect-ratio: 1/1;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+
+/* Mobile First Responsive Design */
+
+/* Mobile devices (320px - 767px) */
+@media screen and (max-width: 767px) {
+    .profile-container {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 10px;
+    }
+    
+    form {
+        padding: 30px 20px;
+        order: 2;
+    }
+    
+    .profile-pic {
+        width: clamp(80px, 25vw, 120px);
+        margin: 20px auto 0;
+        order: 1;
+    }
+    
+    input, textarea {
+        max-width: 100%;
+    }
+}
+
+/* Tablet devices (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .profile-container {
+        max-width: 600px;
+    }
+    
+    form {
+        padding: 30px;
+    }
+}
+
+/* Desktop devices (1024px and up) */
+@media screen and (min-width: 1024px) {
+    .profile-container {
+        max-width: 700px;
+    }
+}
+
+/* Small mobile devices (below 375px) */
+@media screen and (max-width: 374px) {
+    .profile {
+        padding: 10px;
+    }
+    
+    .profile-container {
+        margin: 5px;
+    }
+    
+    form {
+        padding: 20px 15px;
+    }
+}
+
+/* Large screens (1440px and up) */
+@media screen and (min-width: 1440px) {
+    .profile-container {
+        max-width: 800px;
+    }
+    
+    form {
+        padding: 50px;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .profile-container {
+        flex-direction: row;
+        max-width: 90%;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        margin: 20px;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-pic, label img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+    
+    button:active {
+        transform: none;
+    }
+}
+
+/* Focus styles for accessibility */
+input:focus, textarea:focus, button:focus {
+    outline: 2px solid #077eff;
+    outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .profile-container {
+        background: linear-gradient(to right, #0666cc, #2a2a2a);
+    }
+    
+    h3 {
+        color: #f0f0f0;
+    }
+    
+    input, textarea {
+        background-color: #333;
+        color: #f0f0f0;
+        border-color: #555;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
